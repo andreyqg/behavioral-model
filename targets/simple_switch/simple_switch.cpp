@@ -149,6 +149,72 @@ struct g4 {
   }
 };
 
+struct hhd1 {
+  uint32_t operator()(const char *buf, size_t s) const {
+    uint32_t hash = 0;
+    if (s == 4) {
+      uint32_t data = ntohl(*reinterpret_cast<const uint32_t*>(buf));
+      hash = ((static_cast<uint64_t>(113292259)*data + 68483982) % 179424691) % 1400;
+    }
+    return hash;
+  }
+};
+
+struct hhd2 {
+  uint32_t operator()(const char *buf, size_t s) const {
+    uint32_t hash = 0;
+    if (s == 4) {
+      uint32_t data = ntohl(*reinterpret_cast<const uint32_t*>(buf));
+      hash = ((static_cast<uint64_t>(113292259)*data + 68483982) % 179424691) % 1400;
+    }
+    return hash;
+  }
+};
+
+struct hhd3 {
+  uint32_t operator()(const char *buf, size_t s) const {
+    uint32_t hash = 0;
+    if (s == 4) {
+      uint32_t data = ntohl(*reinterpret_cast<const uint32_t*>(buf));
+      hash = ((static_cast<uint64_t>(35316782)*data + 126831809) % 179424691) % 1400;
+    }
+    return hash;
+  }
+};
+
+struct hhd4 {
+  uint32_t operator()(const char *buf, size_t s) const {
+    uint32_t hash = 0;
+    if (s == 4) {
+      uint32_t data = ntohl(*reinterpret_cast<const uint32_t*>(buf));
+      hash = ((static_cast<uint64_t>(159559853)*data + 107589136) % 179424691) % 1400;
+    }
+    return hash;
+  }
+};
+
+struct hhd5 {
+  uint32_t operator()(const char *buf, size_t s) const {
+    uint32_t hash = 0;
+    if (s == 4) {
+      uint32_t data = ntohl(*reinterpret_cast<const uint32_t*>(buf));
+      hash = ((static_cast<uint64_t>(81840042)*data + 13527551) % 179424691) % 1400;
+    }
+    return hash;
+  }
+};
+
+struct hhd6 {
+  uint32_t operator()(const char *buf, size_t s) const {
+    uint32_t hash = 0;
+    if (s == 4) {
+      uint32_t data = ntohl(*reinterpret_cast<const uint32_t*>(buf));
+      hash = ((static_cast<uint64_t>(19537968)*data + 97145494) % 179424691) % 1400;
+    }
+    return hash;
+  }
+};
+
 }  // namespace
 
 // if REGISTER_HASH calls placed in the anonymous namespace, some compiler can
@@ -163,6 +229,12 @@ REGISTER_HASH(g1);
 REGISTER_HASH(g2);
 REGISTER_HASH(g3);
 REGISTER_HASH(g4);
+REGISTER_HASH(hhd1);
+REGISTER_HASH(hhd2);
+REGISTER_HASH(hhd3);
+REGISTER_HASH(hhd4);
+REGISTER_HASH(hhd5);
+REGISTER_HASH(hhd6);
 
 extern int import_primitives(SimpleSwitch *simple_switch);
 
