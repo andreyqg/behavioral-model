@@ -149,7 +149,7 @@ struct g4 {
   }
 };
 
-struct hhd1 {
+struct d1 {
   uint32_t operator()(const char *buf, size_t s) const {
     uint32_t hash = 0;
     if (s == 4) {
@@ -160,7 +160,7 @@ struct hhd1 {
   }
 };
 
-struct hhd2 {
+struct d2 {
   uint32_t operator()(const char *buf, size_t s) const {
     uint32_t hash = 0;
     if (s == 4) {
@@ -171,7 +171,7 @@ struct hhd2 {
   }
 };
 
-struct hhd3 {
+struct d3 {
   uint32_t operator()(const char *buf, size_t s) const {
     uint32_t hash = 0;
     if (s == 4) {
@@ -182,7 +182,7 @@ struct hhd3 {
   }
 };
 
-struct hhd4 {
+struct d4 {
   uint32_t operator()(const char *buf, size_t s) const {
     uint32_t hash = 0;
     if (s == 4) {
@@ -193,7 +193,7 @@ struct hhd4 {
   }
 };
 
-struct hhd5 {
+struct d5 {
   uint32_t operator()(const char *buf, size_t s) const {
     uint32_t hash = 0;
     if (s == 4) {
@@ -204,7 +204,7 @@ struct hhd5 {
   }
 };
 
-struct hhd6 {
+struct d6 {
   uint32_t operator()(const char *buf, size_t s) const {
     uint32_t hash = 0;
     if (s == 4) {
