@@ -61,7 +61,7 @@ void register_port_status_cb(pi_dev_id_t dev_id) {
 
 extern "C" {
 
-pi_status_t _pi_init(void *extra) {
+pi_status_t _pi_init(int *abi_version, void *extra) {
   _BM_UNUSED(extra);
   pibmv2::device_lock = new pibmv2::DeviceLock();
   return PI_STATUS_SUCCESS;
